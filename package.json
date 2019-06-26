@@ -1,9 +1,10 @@
 {
 	"name": "@titanium/identity",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Native modules to add Fingerprint/FaceId/keychain access to Titanium native mobile apps",
 	"main": "index.js",
 	"scripts": {
+		"list-files": "npm pack && tar -xvzf *.tgz && rm -rf package *.tgz",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"author": {
