@@ -1,0 +1,40 @@
+{
+	"name": "@titanium/identity",
+	"version": "0.0.1",
+	"description": "Native modules to add Fingerprint/FaceId/keychain access to Titanium native mobile apps",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": {
+		"name": "Brenton House",
+		"email": "brenton.house@gmail.com",
+		"url": "https://brenton.house"
+	},
+	"repository": {
+		"type": "git",
+		"url": "github:brentonhouse/titanium-identity"
+	},
+	"license": "Apache-2.0",
+	"bugs": {
+		"url": "https://github.com/brentonhouse/titanium-identity/issues"
+	},
+	"homepage": "https://github.com/brentonhouse/titanium-identity#readme",
+	"keywords": [
+		"titanium",
+		"mobile",
+		"alloy",
+		"eslint",
+		"turbo",
+		"axway",
+		"appcelerator",
+		"ios",
+		"android",
+		"iphone",
+		"ipad",
+		"brentonhouse"
+	],
+	"titanium": {
+		"nativeModules": "__modules"
+	}
+}
