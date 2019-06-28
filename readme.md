@@ -25,6 +25,41 @@ This is a repackaging of the compiled iOS and Android modules for [Ti.Identity](
 npm install @titanium/identity
 ```
 
+2. Using Keychain feature
+
+```
+const Keychain = require('@titanium/identity/Keychain');
+const usernameKeychain = new Keychain('username');
+const passwordKeychain = new Keychain('password');
+
+// saving values
+usernameKeychain.save('my-username');
+passwordKeychain.save('my-password');
+
+// Loading values
+passwordKeychain.load()
+	.then(value => {
+		const password = value;
+		Authentication.authenticate({ username, password });
+	})
+	.catch(require('@titanium/identity/KeychainItemNotFound'), error => {
+		console.error('KeychainItemNotFound error in passwordKeychain.load()');
+		console.error(error);
+
+	})
+	.catch(error => {
+		console.error('A different error has occurred in passwordKeychain.load()');
+		console.error(error);
+	});
+
+
+// resetting values
+usernameKeychain.reset();
+passwordKeychain.reset();
+
+
+```
+
 
 ## ✨Features
 
