@@ -1,6 +1,6 @@
 # @titanium/identity
 
-![https://www.npmjs.com/package/@titanium/identity](https://img.shields.io/npm/v/@titanium/identity.png)
+[![@titanium/identity](https://img.shields.io/npm/v/@titanium/identity.png)](https://www.npmjs.com/package/@titanium/identity)
 
 
 > Native modules that allows you to use Fingerprint authentication, Keychain Access and Face authentication (iOS) with Axway Titanium.
