@@ -1,13 +1,13 @@
 {
 	"name": "@titanium/identity",
-	"version": "0.0.8",
+	"version": "1.0.0",
 	"description": "Native modules to add Fingerprint/FaceId/keychain access to Titanium native mobile apps",
 	"main": "index.js",
 	"scripts": {
 		"list-files": "npm pack && tar -xvzf *.tgz && rm -rf package *.tgz",
 		"postinstall": "tiapp-remove-module ti.identity && tiapp-add-module ti.identity ios 1.0.6 && tiapp-add-module ti.identity android 2.1.1",
 		"postuninstall": "tiapp-remove-module ti.identity",
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "npm install --ignore-scripts && npm run list-files"
 	},
 	"author": {
 		"name": "Brenton House",
@@ -34,7 +34,8 @@
 		"android",
 		"iphone",
 		"ipad",
-		"brentonhouse"
+		"titanium-native-module",
+		"brenton-house"
 	],
 	"titanium": {
 		"type": "native-module",
