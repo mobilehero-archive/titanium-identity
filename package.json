@@ -1,6 +1,6 @@
 {
 	"name": "@titanium/identity",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"description": "Native modules to add Fingerprint/FaceId/keychain access to Titanium native mobile apps",
 	"main": "index.js",
 	"scripts": {
@@ -58,8 +58,9 @@
 	},
 	"devDependencies": {
 		"@titanium/eslint-config": "0.0.9",
-		"@titanium/tiapp-xml": "^0.7.1",
 		"eslint": "^6.1.0"
 	},
-	"dependencies": {}
+	"dependencies": {
+		"@titanium/tiapp-xml": "^0.7.1"
+	}
 }
