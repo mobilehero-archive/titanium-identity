@@ -2,6 +2,8 @@
 .DS_Store
 Thumbs.db
 
+tiapp.xml
+
 # Temporary files
 tmp
 
