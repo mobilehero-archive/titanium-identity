@@ -3,7 +3,7 @@
 .eslintrc
 .eslintrc.yml
 
-
+tiapp.xml
 
 # OS Directories and Files
 .DS_Store

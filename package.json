@@ -1,6 +1,6 @@
 {
 	"name": "@titanium/identity",
-	"version": "1.0.7",
+	"version": "1.0.10",
 	"description": "Native modules to add Fingerprint/FaceId/keychain access to Titanium native mobile apps",
 	"main": "index.js",
 	"scripts": {
