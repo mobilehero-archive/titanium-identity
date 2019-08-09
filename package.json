@@ -1,19 +1,15 @@
 {
 	"name": "@titanium/identity",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Native modules to add Fingerprint/FaceId/keychain access to Titanium native mobile apps",
 	"main": "index.js",
 	"scripts": {
 		"list-files": "npm pack && tar -xvzf *.tgz && rm -rf package *.tgz",
-		"postinstall": "tiapp-remove-module ti.identity && tiapp-add-module ti.identity ios 1.0.6 && tiapp-add-module ti.identity android 2.1.1",
-		"postuninstall": "tiapp-remove-module ti.identity",
+		"postinstall": "tiapp-install-module",
+		"postuninstall": "tiapp-uninstall-module",
 		"test": "npm install --ignore-scripts && npm run list-files"
 	},
-	"author": {
-		"name": "Brenton House",
-		"email": "brenton.house@gmail.com",
-		"url": "https://brenton.house"
-	},
+	"author": "Axway",
 	"repository": {
 		"type": "git",
 		"url": "github:brentonhouse/titanium-identity"
@@ -42,26 +38,14 @@
 		"platform": [
 			"ios",
 			"android"
-		],
-		"native": [
-			{
-				"name": "ti.identity",
-				"platform": "ios",
-				"version": "1.0.6"
-			},
-			{
-				"name": "ti.identity",
-				"platform": "android",
-				"version": "2.1.1"
-			}
 		]
 	},
 	"devDependencies": {
 		"@titanium/eslint-config": "0.0.9",
-		"@titanium/tiapp-xml": "^0.4.2",
+		"@titanium/tiapp-xml": "^0.6.0",
 		"eslint": "^6.1.0"
 	},
 	"dependencies": {
-		"@titanium/tiapp-xml": "^0.4.2"
+		"@titanium/tiapp-xml": "^0.6.0"
 	}
 }
