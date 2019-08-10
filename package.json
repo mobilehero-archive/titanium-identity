@@ -40,7 +40,7 @@
 				"moduleid": "titanium-identity",
 				"name": "titanium-identity",
 				"version": "1.0.6",
-				"apiversion": "2",
+				"apiversion": 2,
 				"architecture": "armv7 arm64 i386 x86_64",
 				"minsdk": "6.2.0",
 				"guid": "ae6ffc93-6e6e-4251-8373-b0cb263a1662"
@@ -49,7 +49,7 @@
 				"moduleid": "titanium-identity",
 				"name": "titanium-identity",
 				"version": "2.1.1",
-				"apiversion": "4",
+				"apiversion": 4,
 				"architecture": "arm64-v8a armeabi-v7a x86",
 				"minsdk": "7.0.0",
 				"guid": "c3d987a8-8bd4-42cd-a3e4-2a75952d1ea0"
