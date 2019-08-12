@@ -1,6 +1,6 @@
 {
 	"name": "@titanium/identity",
-	"version": "1.0.13",
+	"version": "1.0.14",
 	"description": "Native modules to add Fingerprint/FaceId/keychain access to Titanium native mobile apps",
 	"main": "index.js",
 	"scripts": {
@@ -36,20 +36,27 @@
 	"titanium": {
 		"type": "native-module",
 		"version": "1.0.13",
+		"moduleid": "titanium-identity",
+		"name": "titanium-identity",
 		"platform": {
 			"ios": {
-				"moduleid": "titanium-identity",
-				"name": "titanium-identity",
 				"apiversion": 2,
-				"architecture": "armv7 arm64 i386 x86_64",
+				"architecture": [
+					"armv7",
+					"arm64",
+					"i386",
+					"x86_64"
+				],
 				"minsdk": "6.2.0",
 				"guid": "ae6ffc93-6e6e-4251-8373-b0cb263a1662"
 			},
 			"android": {
-				"moduleid": "titanium-identity",
-				"name": "titanium-identity",
 				"apiversion": 4,
-				"architecture": "arm64-v8a armeabi-v7a x86",
+				"architecture": [
+					"arm64-v8a",
+					"armeabi-v7a",
+					"x86"
+				],
 				"minsdk": "7.0.0",
 				"guid": "c3d987a8-8bd4-42cd-a3e4-2a75952d1ea0"
 			}
@@ -60,6 +67,6 @@
 		"eslint": "^6.1.0"
 	},
 	"dependencies": {
-		"@titanium/tiapp-xml": "^0.8.0"
+		"@titanium/tiapp-xml": "^0.9.0"
 	}
 }
