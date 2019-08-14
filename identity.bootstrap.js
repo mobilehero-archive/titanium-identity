@@ -1,1 +1,1 @@
-global.binding.register('titanium-identity', require('ti.identity'));
+global.binding.register('titanium_identity', require('ti.identity'));

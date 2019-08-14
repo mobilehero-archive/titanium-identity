@@ -1,1 +1,1 @@
-module.exports = require('titanium-identity');
+module.exports = require('titanium_identity');
