@@ -1,7 +1,0 @@
-#
-# this is your module manifest and used by Titanium
-# during compilation, packaging, distribution, etc.
-#
-description: titanium-identity
-author: Hans Knoechel
-
