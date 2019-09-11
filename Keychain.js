@@ -1,4 +1,4 @@
-const identity = require('ti.identity');
+const identity = require('ti_identity');
 const KeychainItemNotFound = require('./KeychainItemNotFound');
 const teamId = Ti.App.Properties.getString('AppTeamId', Alloy.CFG.AppTeamId || 'TEAMID');
 

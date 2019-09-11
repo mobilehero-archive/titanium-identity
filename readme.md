@@ -5,12 +5,12 @@
 
 > Native modules that allows you to use Fingerprint authentication, Keychain Access and Face authentication (iOS) with Axway Titanium.
 
-- [📝 Description](#-Description)
-- [🚀 Getting Started](#-Getting-Started)
-- [✨Features](#Features)
-- [📚Learn More](#Learn-More)
-- [📣 Feedback](#-Feedback)
-- [©️ Legal](#️-Legal)
+* [📝 Description](#-description)
+* [🚀 Getting Started](#-getting-started)
+* [✨Features](#features)
+* [📚Learn More](#learn-more)
+* [📣 Feedback](#-feedback)
+* [©️ Legal](#️-legal)
 
 
 ## 📝 Description
@@ -21,13 +21,13 @@ This is a repackaging of the compiled iOS and Android modules for [Ti.Identity](
 
 1. Install `@titanium/identity` in root of project
 
-```
+```bash
 npm install @titanium/identity
 ```
 
 2. Using Keychain feature
 
-```
+```JavaScript
 const Keychain = require('@titanium/identity/Keychain');
 const usernameKeychain = new Keychain('username');
 const passwordKeychain = new Keychain('password');
