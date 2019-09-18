@@ -1,6 +1,7 @@
+/* eslint-disable max-statements-per-line */
 'use strict';
 
-exports.id = '@titanium/identity';
+exports.id = 'ti.identity';
 exports.cliVersion = '>=3.2';
 
 exports.init = function init(logger, config, cli, appc) {

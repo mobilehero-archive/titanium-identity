@@ -1,5 +1,5 @@
-const identity = require('ti_identity');
-const KeychainItemNotFound = require('./KeychainItemNotFound');
+const identity = require('ti.identity');
+const KeychainItemNotFoundError = require('./KeychainItemNotFound');
 const teamId = Ti.App.Properties.getString('AppTeamId', Alloy.CFG.AppTeamId || 'TEAMID');
 
 export default class Keychain {
@@ -24,7 +24,7 @@ export default class Keychain {
 					});
 					this.keychainItem.read();
 				} else {
-					reject(new KeychainItemNotFound('Keychain does not exist.'));
+					reject(new KeychainItemNotFoundError('Keychain does not exist.'));
 				}
 			});
 		});
@@ -46,4 +46,5 @@ export default class Keychain {
 
 }
 
+Keychain.KeychainItemNotFoundError = KeychainItemNotFoundError;
 module.exports = Keychain;
