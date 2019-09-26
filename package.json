@@ -70,6 +70,6 @@
 		"eslint": "^6.4.0"
 	},
 	"dependencies": {
-		"@titanium/tiapp-xml": "^0.9.4"
+		"@titanium/tiapp-xml": "^0.9.5"
 	}
 }
