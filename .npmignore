@@ -2,7 +2,9 @@
 .eslintrc.yaml
 .eslintrc
 .eslintrc.yml
+
 .dependabot
+.github
 
 tiapp.xml
 
