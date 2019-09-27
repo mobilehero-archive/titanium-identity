@@ -7,8 +7,9 @@
 		"list-files": "npm pack && tar -xvzf *.tgz && rm -rf package *.tgz",
 		"postinstall": "tiapp-install-module",
 		"postuninstall": "tiapp-uninstall-module",
-		"test": "npm install --ignore-scripts && npm run list-files",
-		"prepublishOnly": "git pull && bump"
+		"prep": "npm install --ignore-scripts && npm run list-files",
+		"prepublishOnly": "git pull && bump",
+		"test": "echo \"no test specified\" && exit 0"
 	},
 	"author": "Axway",
 	"repository": {
