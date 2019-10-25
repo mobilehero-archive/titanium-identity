@@ -69,7 +69,7 @@
 	},
 	"devDependencies": {
 		"@titanium/eslint-config": "0.0.11",
-		"eslint": "^6.5.1"
+		"eslint": "^6.6.0"
 	},
 	"dependencies": {
 		"@titanium/tiapp-xml": "^0.9.5"
