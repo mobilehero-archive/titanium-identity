@@ -1,13 +1,13 @@
 const identity = require('ti.identity');
 const KeychainItemNotFoundError = require('./KeychainItemNotFound');
-const teamId = Ti.App.Properties.getString('AppTeamId', Alloy.CFG.AppTeamId || 'TEAMID');
+const teamId = Ti.App.Properties.getString('team-id', Alloy.CFG['team-id'] || 'TEAMID');
 
 export default class Keychain {
 	constructor(identifier) {
 		this.identifier = identifier;
 		this.keychainItem = identity.createKeychainItem({
 			identifier:  identifier,
-			accessGroup: `${teamId}.${Ti.App.Id}`,
+			accessGroup: `${teamId}.${Ti.App.id}`,
 		});
 	}
 	load() {
