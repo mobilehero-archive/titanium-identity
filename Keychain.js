@@ -31,12 +31,22 @@ export default class Keychain {
 	}
 
 	save(value) {
-		this.keychainItem.fetchExistence(e => {
-			if (e.exists) {
-				this.keychainItem.update(value);
-			} else {
-				this.keychainItem.save(value);
-			}
+		// eslint-disable-next-line promise/avoid-new
+		return new Promise((resolve, reject) => {
+			this.keychainItem.fetchExistence(e => {
+				this.keychainItem.addEventListener('save', e => {
+					if (!e.success) {
+						reject(null);
+					}
+					// Return the value
+					resolve(e.value);
+				});
+				if (e.exists) {
+					this.keychainItem.update(value);
+				} else {
+					this.keychainItem.save(value);
+				}
+			});
 		});
 	}
 
