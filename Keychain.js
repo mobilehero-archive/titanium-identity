@@ -14,10 +14,14 @@ export default class Keychain {
 		// eslint-disable-next-line promise/avoid-new
 		return new Promise((resolve, reject) => {
 			this.keychainItem.fetchExistence(e => {
+				console.debug(`keychainItem.exists: ${JSON.stringify(e, null, 2)}`);
 				if (e.exists) {
-					this.keychainItem.addEventListener('read', e => {
+					const keychainItem = this.keychainItem;
+					this.keychainItem.addEventListener('read', function onRead(e)  {
+						// console.debug(`keychainItem.read: ${JSON.stringify(e, null, 2)}`);
+						keychainItem.removeEventListener('read', onRead);
 						if (!e.success) {
-							return reject(null);
+							return reject(new Error('Error reading keychainItem'));
 						}
 						// Return the value
 						return resolve(e.value);
@@ -34,16 +38,29 @@ export default class Keychain {
 		// eslint-disable-next-line promise/avoid-new
 		return new Promise((resolve, reject) => {
 			this.keychainItem.fetchExistence(e => {
-				this.keychainItem.addEventListener('save', e => {
-					if (!e.success) {
-						return reject(null);
-					}
-					// Return the value
-					return resolve(e.value);
-				});
+				console.debug(`keychainItem.exists: ${JSON.stringify(e, null, 2)}`);
+				const keychainItem = this.keychainItem;
 				if (e.exists) {
+					this.keychainItem.addEventListener('update', function onUpdate(e) {
+						// console.debug(`keychainItem.update: ${JSON.stringify(e, null, 2)}`);
+						keychainItem.removeEventListener('update', onUpdate);
+						if (!e.success) {
+							return reject(new Error('Error updating keychainItem'));
+						}
+						// Return the value
+						return resolve(e.value);
+					});		
 					this.keychainItem.update(value);
 				} else {
+					this.keychainItem.addEventListener('save',function onSave(e) {
+						// console.debug(`keychainItem.save: ${JSON.stringify(e, null, 2)}`);
+						keychainItem.removeEventListener('save', onSave);
+						if (!e.success) {
+							return reject(new Error('Error saving keychainItem'));
+						}
+						// Return the value
+						return resolve(e.value);
+					});
 					this.keychainItem.save(value);
 				}
 			});
@@ -53,12 +70,12 @@ export default class Keychain {
 	reset() {
 		// eslint-disable-next-line promise/avoid-new
 		return new Promise((resolve, reject) => {
-
-			this.keychainItem.addEventListener('reset', e => {
-				console.debug(`e: ${JSON.stringify(e, null, 2)}`);
-
+			const keychainItem = this.keychainItem;
+			this.keychainItem.addEventListener('reset', function onReset(e)  {
+				// console.debug(`keychainItem.reset: ${JSON.stringify(e, null, 2)}`);
+				keychainItem.removeEventListener('reset', onReset);
 				if (!e.success) {
-					return reject(null);
+					return reject(new Error('Error resetting keychainItem'));
 				}
 				// Resolve promise
 				return resolve();
