@@ -1,15 +1,14 @@
 {
 	"name": "@titanium/identity",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"description": "Native modules to add Fingerprint/FaceId/keychain access to Titanium native mobile apps",
 	"main": "index.js",
 	"scripts": {
-		"list-files": "npm pack && tar -xvzf *.tgz && rm -rf package *.tgz",
-		"postinstall": "tiapp-install-module",
-		"postuninstall": "tiapp-uninstall-module",
-		"prep": "npm install --ignore-scripts && npm run list-files",
-		"prepublishOnly2": "git pull && bump",
-		"test": "echo \"no test specified\" && exit 0"
+		"list": "npm pack && tar -xvzf *.tgz && rm -rf package *.tgz",
+		"postinstall": "npx @titanium/tiapp-xml install",
+		"postuninstall": "npx @titanium/tiapp-xml uninstall",
+		"prepublishOnly": "git pull && bump",
+		"test": "npm install --ignore-scripts && npm run list"
 	},
 	"author": "Axway",
 	"repository": {
@@ -68,10 +67,10 @@
 		}
 	},
 	"devDependencies": {
-		"@titanium/eslint-config": "0.0.11",
-		"eslint": "^6.8.0"
-	},
-	"dependencies": {
-		"@titanium/tiapp-xml": "^0.9.5"
+		"@titanium/eslint-config": "0.0.18",
+		"eslint": "^7.11.0",
+		"eslint-plugin-import": "^2.22.1",
+		"eslint-plugin-jsdoc": "^30.6.4",
+		"eslint-plugin-promise": "^4.2.1"
 	}
 }
