@@ -1,6 +1,6 @@
 {
 	"name": "@titanium/identity",
-	"version": "1.0.29",
+	"version": "1.1.0",
 	"description": "Native modules to add Fingerprint/FaceId/keychain access to Titanium native mobile apps",
 	"main": "index.js",
 	"scripts": {
@@ -8,7 +8,7 @@
 		"postinstall": "tiapp-install-module",
 		"postuninstall": "tiapp-uninstall-module",
 		"prep": "npm install --ignore-scripts && npm run list-files",
-		"prepublishOnly": "git pull && bump",
+		"prepublishOnly2": "git pull && bump",
 		"test": "echo \"no test specified\" && exit 0"
 	},
 	"author": "Axway",
@@ -40,8 +40,8 @@
 		"platform": {
 			"ios": {
 				"moduleid": "ti.identity",
-				"name": "ti.identity",
-				"version": "1.0.6",
+				"name": "titanium-identity",
+				"version": "1.1.0",
 				"apiversion": 2,
 				"architectures": [
 					"armv7",
@@ -55,7 +55,7 @@
 			"android": {
 				"moduleid": "ti.identity",
 				"name": "titanium-identity",
-				"version": "2.1.1",
+				"version": "2.2.0",
 				"apiversion": 4,
 				"architectures": [
 					"arm64-v8a",

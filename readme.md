@@ -72,8 +72,8 @@ passwordKeychain.reset();
 
 ## ✨Features
 
-iOS: `ti.identity 1.0.6`
-Android: `ti.identity 2.1.1`
+iOS: `ti.identity 1.1.0`
+Android: `ti.identity 2.2.0`
 
 * [x] Use the Fingerprint sensor of your device to authenticate
 * [x] Use the Face detection API's of your device to authenticate (iOS 11+)
