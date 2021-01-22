@@ -1,13 +1,13 @@
 {
 	"name": "@titanium/identity",
-	"version": "1.1.2",
+	"version": "2.0.1",
 	"description": "Native modules to add Fingerprint/FaceId/keychain access to Titanium native mobile apps",
 	"main": "index.js",
 	"scripts": {
 		"list": "npm pack && tar -xvzf *.tgz && rm -rf package *.tgz",
 		"postinstall": "npx @titanium/tiapp-xml install",
 		"postuninstall": "npx @titanium/tiapp-xml uninstall",
-		"prepublishOnly": "git pull && bump",
+		"prepublishOnly": "git pull && bump release",
 		"test": "npm install --ignore-scripts && npm run list"
 	},
 	"author": "Axway",
@@ -40,7 +40,7 @@
 			"ios": {
 				"moduleid": "ti.identity",
 				"name": "titanium-identity",
-				"version": "1.1.0",
+				"version": "3.0.0",
 				"apiversion": 2,
 				"architectures": [
 					"armv7",
@@ -48,29 +48,31 @@
 					"i386",
 					"x86_64"
 				],
-				"minsdk": "6.2.0",
+				"minsdk": "9.2.0",
 				"guid": "ae6ffc93-6e6e-4251-8373-b0cb263a1662"
 			},
 			"android": {
 				"moduleid": "ti.identity",
 				"name": "titanium-identity",
-				"version": "2.2.0",
+				"version": "3.0.3",
 				"apiversion": 4,
 				"architectures": [
 					"arm64-v8a",
 					"armeabi-v7a",
-					"x86"
+					"x86",
+					"x86_64"
 				],
-				"minsdk": "7.0.0",
+				"minsdk": "9.0.0",
 				"guid": "c3d987a8-8bd4-42cd-a3e4-2a75952d1ea0"
 			}
 		}
 	},
 	"devDependencies": {
-		"@titanium/eslint-config": "0.0.18",
-		"eslint": "^7.11.0",
+		"@titanium/eslint-config": "1.0.1",
+		"eslint": "^7.18.0",
 		"eslint-plugin-import": "^2.22.1",
-		"eslint-plugin-jsdoc": "^30.6.4",
+		"eslint-plugin-jsdoc": "^31.0.8",
+		"eslint-plugin-jsonc": "^0.8.2",
 		"eslint-plugin-promise": "^4.2.1"
 	}
 }

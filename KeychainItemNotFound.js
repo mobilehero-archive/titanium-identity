@@ -1,7 +1,7 @@
 export default class KeychainItemNotFound extends Error {
 	constructor(message) {
 	  super(message);
-	  this.name = 'KeychainItemNotFound';
+	  this.name = `KeychainItemNotFound`;
 	}
 
 	toJSON() {
@@ -10,7 +10,7 @@ export default class KeychainItemNotFound extends Error {
 		  error: {
 				name:       this.name,
 				message:    this.message,
-				stacktrace: this.stack.split('\n'),
+				stacktrace: this.stack.split(`\n`),
 		  },
 		};
 	}

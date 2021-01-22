@@ -1,1 +1,1 @@
-module.exports = require('ti.identity');
+module.exports = require(`ti.identity`);
