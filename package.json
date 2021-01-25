@@ -71,7 +71,7 @@
 		"@titanium/eslint-config": "1.0.1",
 		"eslint": "^7.18.0",
 		"eslint-plugin-import": "^2.22.1",
-		"eslint-plugin-jsdoc": "^31.0.8",
+		"eslint-plugin-jsdoc": "^31.3.3",
 		"eslint-plugin-jsonc": "^0.8.2",
 		"eslint-plugin-promise": "^4.2.1"
 	}
