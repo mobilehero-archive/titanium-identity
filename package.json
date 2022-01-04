@@ -1,13 +1,13 @@
 {
 	"name": "@titanium/identity",
-	"version": "2.0.3",
+	"version": "2.0.4",
 	"description": "Native modules to add Fingerprint/FaceId/keychain access to Titanium native mobile apps",
 	"main": "index.js",
 	"scripts": {
 		"list": "npm pack && tar -xvzf *.tgz && rm -rf package *.tgz",
 		"postinstall": "npx @titanium/tiapp-xml install",
 		"postuninstall": "npx @titanium/tiapp-xml uninstall",
-		"prepublishOnly": "git pull && bump release",
+		"prepublishOnly2": "git pull && bump release",
 		"test": "npm install --ignore-scripts && npm run list"
 	},
 	"author": "Axway",
@@ -31,6 +31,10 @@
 		"android",
 		"iphone",
 		"ipad",
+		"plugin",
+		"api-builder",
+		"axway-amplify",
+		"amplify",
 		"titanium-native-module",
 		"brenton-house"
 	],
