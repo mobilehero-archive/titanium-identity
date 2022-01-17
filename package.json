@@ -1,6 +1,6 @@
 {
 	"name": "@titanium/identity",
-	"version": "2.0.29",
+	"version": "2.0.30",
 	"description": "⭐  Axway Amplify modules to use Fingerprint authentication, Keychain Access and Face authentication (iOS) with Appcelerator Titanium SDK",
 	"main": "index.js",
 	"scripts": {
@@ -105,11 +105,11 @@
 		"@titanium/eventsource": "^1.0.26",
 		"@titanium/jwt": "^1.0.28",
 		"@titanium/module-copier": "^1.0.32",
-		"@titanium/please": "^1.0.34",
+		"@titanium/please": "^1.0.35",
 		"@titanium/polyfill": "^1.0.32",
 		"@titanium/querystring": "^1.0.24",
 		"@titanium/tiapp-xml": "^1.0.35",
 		"@titanium/titanium": "^5.4.28",
-		"@titanium/turbo": "^2.2.50"
+		"@titanium/turbo": "^2.2.51"
 	}
 }
